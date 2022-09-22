@@ -10,8 +10,11 @@ public class QueryProcessor {
         }
         else if (query.toLowerCase().contains("plus")) {
             String[] parts = query.split(" ");
-            // System.out.println(parts);
             return String.valueOf((Integer.parseInt(parts[2]) + Integer.parseInt(parts[4])));
+        }
+        else if (query.toLowerCase().contains("multiplied by")) {
+            String[] parts = query.split(" ");
+            return String.valueOf((Integer.parseInt(parts[2]) * Integer.parseInt(parts[5])));
         }
         // else if (query.toLowerCase().contains("which of the following numbers is the largest")) {
         //     String[] parts = query.split("%20");

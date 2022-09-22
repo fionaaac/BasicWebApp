@@ -30,6 +30,11 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("what is 9 plus 12"), containsString("21"));
     }
 
+    @Test
+    public void timesWorks() throws Exception {
+        assertThat(queryProcessor.process("what is 9 multiplied by 2"), containsString("18"));
+    }
+
     // @Test
     // public void maxWorks() throws Exception {
     //     assertThat(queryProcessor.process("which of the following numbers is the largest:%20905,%2094"), containsInt(20905));
